@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar Imóveis</title>
+</head>
+<body>
+    <h1>Pesquisar Imóveis</h1>
+    <form action="{% url 'pesquisar_imoveis' %}" method="get">
+        <label for="search_query">Pesquisar por:</label>
+        <select name="filter" id="filter">
+            <option value="id" {% if selected_filter == 'id' %}selected{% endif %}>ID</option>
+            <option value="contribuinte" {% if selected_filter == 'contribuinte' %}selected{% endif %}>Contribuinte</option>
+            <option value="logradouro" {% if selected_filter == 'logradouro' %}selected{% endif %}>Logradouro</option>
+            <option value="numero" {% if selected_filter == 'numero' %}selected{% endif %}>Número</option>
+            <option value="complemento" {% if selected_filter == 'complemento' %}selected{% endif %}>Complemento</option>
+            <option value="bairro" {% if selected_filter == 'bairro' %}selected{% endif %}>Bairro</option>
+            <option value="cep" {% if selected_filter == 'cep' %}selected{% endif %}>CEP</option>
+            <option value="area" {% if selected_filter == 'area' %}selected{% endif %}>Área</option>
+            <option value="valorm2" {% if selected_filter == 'valorm2' %}selected{% endif %}>Valor por m²</option>
+        </select>
+        <input type="text" id="search_query" name="q" placeholder="Digite sua consulta aqui">
+        <button type="submit">Pesquisar</button>
+    </form>
+    
+    {% if imoveis %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Contribuinte</th>
+                <th>Logradouro</th>
+                <th>Número</th>
+                <th>Complemento</th>
+                <th>Bairro</th>
+                <th>CEP</th>
+                <th>Área</th>
+                <th>Valor por m²</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for imovel in imoveis %}
+        <tr>
+            <td>{{ imovel.id }}</td>
+            <td>{{ imovel.contribuinte }}</td>
+            <td>{{ imovel.logradouro }}</td>
+            <td>{{ imovel.numero }}</td>
+            <td>{{ imovel.complemento }}</td>
+            <td>{{ imovel.bairro }}</td>
+            <td>{{ imovel.cep }}</td>
+            <td>{{ imovel.area }}</td>
+            <td>{{ imovel.valorm2 }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>Nenhum imóvel encontrado.</p>
+    {% endif %}
+</body>
+</html>

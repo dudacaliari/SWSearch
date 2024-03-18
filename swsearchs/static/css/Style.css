@@ -3,12 +3,13 @@ body{
 }
 
 header{
-    background-color: rgb(17, 109, 52);
+    background-color: #89c4d0;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     padding: 10px;
     margin-bottom: 100px;
 }
+
 
 .divElements{
     text-align: center;
@@ -20,32 +21,39 @@ header{
     font-family: rubik;
     margin: 20px;
     margin-right: 0px;
-    background-color: rgb(215, 248, 196);
+    background-color: #b6d5db;
     padding-left: 0px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 
 #inputArq::-webkit-file-upload-button {
-    border: 2px solid rgb(6, 97, 21);
-    background: rgb(6, 97, 21);
-    padding: 6px;
+    border: 2px solid #0d3f63;
+    background: #0d3f63;
+    padding: 10px;
     font-family: rubik;
-    border-radius: 5px;
+    border-radius: 30px;
     margin-right: 20px;
     color: whitesmoke;
 }
 
 #btnCarregar{
     border: 0px;
-    background-color: rgb(215, 248, 196);
-    padding: 8px;
+    background-color: #b6d5db;
+    padding: 12px;
     padding-left: 15px;
     padding-right: 15px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 #btnCarregar:hover{
-    background-color: rgb(155, 211, 164);
+    background-color: #3f6183;
+    color: #ffffff;
+}
+
+#titulo_pesquisa{
+    background-color: #0d3f63;
+    padding: 10px;
+    color: azure;
 }

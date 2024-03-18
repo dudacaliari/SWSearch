@@ -22,7 +22,7 @@ def index(request):
         with connection.cursor() as cursor:
             cursor.execute(f"""
                 LOAD DATA INFILE '{caminho_arquivo}'
-                INTO TABLE imovel
+                REPLACE INTO TABLE imovel
                 FIELDS TERMINATED BY ',' 
                 ENCLOSED BY '"'
                 LINES TERMINATED BY '\n'

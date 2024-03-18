@@ -1,0 +1,95 @@
+body{
+    font-family: rubik;
+}
+
+header{
+    background-color: #89c4d0;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+
+#btnCarregar:hover{
+    background-color: #3f6183;
+    color: #ffffff;
+}
+
+#titulo_pesquisa{
+    background-color: #0d3f63;
+    padding: 10px;
+    color: azure;
+    margin-top: 0px;
+    font-size: large;
+    font-weight: lighter;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-left: 30px;
+    margin-bottom: 40px;
+}
+
+select{
+    border: none;
+    background-color: #b7d2ed;
+    padding: 5px;
+    border-radius: 20px 0px 0px 20px;
+    margin-left: 10px;
+    margin-right: 0px;
+    color: #0a0a0a;
+    outline: none;
+    font-family: rubik;
+}
+
+#search_query{
+    border: none;
+    background-color: #b7d2ed;
+    padding: 6px;
+    margin-left: 0px;
+    margin-right: 0px;
+    color: #0a0a0a;
+    outline: none;
+    padding: px;
+}
+
+::-webkit-input-placeholder {
+    color: #0a0a0a;
+    font-family: rubik;
+}
+
+#btn_pesquisar{
+    border: none;
+    background-color: #b7d2ed;
+    padding: 5.5px 15px 5.5px 10px;
+    border-radius: 0px 20px 20px 0px;
+    margin-left: 0px;
+    color: #0a0a0a;
+    outline: none;
+    font-family: rubik;
+}
+
+#btn_pesquisar:hover{
+    background-color: #467da4;
+    color: rgb(255, 255, 255);
+}
+
+table, th, td{
+    border: 2px solid #ffffff;
+    border-collapse: collapse;
+    padding: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #dce6f0;
+}
+
+table{
+    width: 100%;
+}
+
+th{
+    background-color: #93b2d1;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-weight: lighter;
+}

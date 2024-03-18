@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_pesquisa.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
     <title>Pesquisar Imóveis</title>
 </head>
 <body>
-    <h1>Pesquisar Imóveis</h1>
+    <header>
+        <h1>SWSearch</h1>
+    </header>
+    <h2 id="titulo_pesquisa">Pesquisar Imóveis</h2>
     <form action="{% url 'pesquisar_imoveis' %}" method="get">
         <label for="search_query">Pesquisar por:</label>
         <select name="filter" id="filter">
@@ -22,7 +28,7 @@
             <option value="valorm2" {% if selected_filter == 'valorm2' %}selected{% endif %}>Valor por m²</option>
         </select>
         <input type="text" id="search_query" name="q" placeholder="Digite sua consulta aqui">
-        <button type="submit">Pesquisar</button>
+        <button type="submit" id="btn_pesquisar">Pesquisar</button>
     </form>
     
     {% if imoveis %}
